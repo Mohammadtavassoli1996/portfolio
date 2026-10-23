@@ -151,7 +151,8 @@ textarea {
 }
 
 .hero-inner {
-  width: 100%;
+  width: min(100% - 40px, 1200px);
+  margin-inline: auto;
 }
 
 
