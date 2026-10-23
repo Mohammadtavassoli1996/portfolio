@@ -875,6 +875,72 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.site-footer {
+  padding: 64px 0 24px;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo {
+  color: var(--text-primary);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.footer-description {
+  margin: 12px 0 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.footer-nav a,
+.footer-bottom a {
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover,
+.footer-bottom a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
 
 
 
@@ -1058,6 +1124,20 @@ button:focus-visible {
 
   .contact-note {
     font-size: 12px;
+  }
+   .site-footer {
+    padding: 52px 0 22px;
+  }
+
+  .footer-nav {
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    margin-top: 40px;
   }
 }
 
@@ -1266,6 +1346,10 @@ button:focus-visible {
 
   .contact-btn:hover span {
     transform: none;
+  }
+   .footer-nav a,
+  .footer-bottom a {
+    transition: none;
   }
 
 }
