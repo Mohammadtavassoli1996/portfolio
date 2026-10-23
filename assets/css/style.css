@@ -293,10 +293,108 @@ button:focus-visible {
 
 
 /* ==========================================
+   ABOUT SECTION
+   ========================================== */
+
+.about {
+  padding: 110px 0 130px;
+  border-top: 1px solid var(--border);
+  background-color: var(--bg-secondary);
+}
+
+/* Section heading */
+
+.about-header {
+  margin-bottom: 60px;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.about-header h2 {
+  margin: 0;
+
+  color: var(--text-primary);
+  font-size: clamp(36px, 4.5vw, 62px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+}
+
+.accent-dot {
+  color: var(--accent);
+}
+
+/* Two-column layout */
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Main introduction */
+
+.about-intro p {
+  max-width: 520px;
+  margin: 0;
+
+  color: var(--text-primary);
+  font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: -0.025em;
+}
+
+/* Details */
+
+.about-details {
+  max-width: 560px;
+}
+
+.about-details p {
+  margin: 0 0 24px;
+
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.about-details p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================
    RESPONSIVE DESIGN
    ========================================== */
 
+
+
 /* ===== Tablets ===== */
+
+@media (max-width: 900px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about {
+    padding: 90px 0;
+  }
+
+  .about-header {
+    margin-bottom: 44px;
+  }
+}
 
 @media (max-width: 768px) {
 
@@ -400,6 +498,29 @@ button:focus-visible {
 
   .btn {
     width: 100%;
+  }
+
+
+   .about {
+    padding: 72px 0 88px;
+  }
+
+  .about-header {
+    margin-bottom: 34px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .about-intro p {
+    font-size: 22px;
+  }
+
+  .about-details p {
+    font-size: 15px;
+    line-height: 1.8;
   }
 
 }
