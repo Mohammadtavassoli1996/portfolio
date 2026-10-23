@@ -863,6 +863,21 @@ button:focus-visible {
 
 
 
+/* ===== Copy Email Button ===== */
+
+.copy-email-btn {
+  cursor: pointer;
+  gap: 12px;
+}
+
+.copy-email-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+
+
+
 /* ==========================================
    RESPONSIVE DESIGN
    ========================================== */
