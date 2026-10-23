@@ -367,5 +367,38 @@
 
   </main>
 
+  
+<script>
+  const copyEmailBtn = document.getElementById("copy-email");
+  const copyEmailLabel =
+    copyEmailBtn.querySelector(".copy-email-label");
+
+  copyEmailBtn.addEventListener("click", async () => {
+    const email = "mohammadtavassoli.1996@gmail.com";
+
+    try {
+      await navigator.clipboard.writeText(email);
+
+      copyEmailLabel.textContent = "Скопировано!";
+      copyEmailBtn.setAttribute(
+        "aria-label",
+        "Адрес электронной почты скопирован"
+      );
+
+      setTimeout(() => {
+        copyEmailLabel.textContent = "Копировать Email";
+        copyEmailBtn.setAttribute(
+          "aria-label",
+          "Скопировать адрес электронной почты"
+        );
+      }, 2500);
+
+    } catch (error) {
+      copyEmailLabel.textContent = "Не удалось скопировать";
+    }
+  });
+</script>
+
+
 </body>
 </html>
