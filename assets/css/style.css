@@ -1,36 +1,120 @@
 
-/* ===== Layout ===== */
+/* ==========================================
+   MOHAMMAD WEB — PORTFOLIO
+   Theme: Dark Minimal
+   Font: Manrope
+   ========================================== */
+
+/* ===== Google Fonts ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+
+/* ===== Design System ===== */
+
+:root {
+  --bg-primary: #141519;
+  --bg-secondary: #22242a;
+
+  --text-primary: #f5f5f4;
+  --text-secondary: #a4a7b0;
+
+  --accent: #bea88b;
+  --accent-hover: #d2bfa5;
+
+  --border: #34353a;
+
+  --font-main: 'Manrope', Arial, sans-serif;
+}
+
+
+/* ===== Global Reset ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+}
+
+
+/* ===== Container ===== */
 
 .container {
   width: min(100% - 40px, 1200px);
   margin-inline: auto;
 }
 
+
 /* ===== Header ===== */
 
 .site-header {
+  width: 100%;
   border-bottom: 1px solid var(--border);
+  background-color: var(--bg-primary);
 }
 
 .header-inner {
   min-height: 88px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 24px;
 }
 
+
+/* ===== Logo ===== */
+
 .logo {
   color: var(--text-primary);
+
   font-size: 22px;
   font-weight: 800;
   letter-spacing: -1px;
+
   text-decoration: none;
 }
 
 .logo-dot {
   color: var(--accent);
 }
+
+
+/* ===== Navigation ===== */
 
 .main-nav {
   display: flex;
@@ -40,9 +124,12 @@
 
 .main-nav a {
   color: var(--text-secondary);
+
   font-size: 14px;
   font-weight: 600;
+
   text-decoration: none;
+
   transition: color 0.2s ease;
 }
 
@@ -51,12 +138,15 @@
   color: var(--accent);
 }
 
-/* ===== Hero ===== */
+
+/* ===== Hero Section ===== */
 
 .hero {
   display: flex;
   align-items: center;
+
   min-height: min(760px, 85vh);
+
   padding-block: 100px;
 }
 
@@ -64,19 +154,33 @@
   width: 100%;
 }
 
+
+/* ===== Hero Label ===== */
+
 .hero-label {
   margin: 0 0 28px;
+
   color: var(--accent);
+
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 3px;
+
+  text-transform: uppercase;
 }
+
+
+/* ===== Hero Heading ===== */
 
 .hero h1 {
   max-width: 1000px;
   margin: 0;
+
+  color: var(--text-primary);
+
   font-size: clamp(44px, 6.5vw, 88px);
   font-weight: 800;
+
   line-height: 1.12;
   letter-spacing: -0.055em;
 }
@@ -86,34 +190,58 @@
   color: var(--accent);
 }
 
+
+/* ===== Hero Description ===== */
+
 .hero-description {
   max-width: 600px;
+
   margin: 32px 0 0;
+
   color: var(--text-secondary);
+
   font-size: clamp(16px, 1.5vw, 19px);
+  font-weight: 400;
+
   line-height: 1.9;
 }
 
-/* ===== Buttons ===== */
+
+/* ===== Hero Actions ===== */
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+
+  align-items: center;
   gap: 16px;
+
   margin-top: 42px;
 }
+
+
+/* ===== Buttons ===== */
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   min-height: 54px;
   padding: 15px 28px;
+
   border: 1px solid transparent;
   border-radius: 8px;
+
+  font-family: var(--font-main);
   font-size: 14px;
   font-weight: 700;
+
+  text-align: center;
   text-decoration: none;
+
+  cursor: pointer;
+
   transition:
     background-color 0.2s ease,
     color 0.2s ease,
@@ -125,16 +253,25 @@
   transform: translateY(-2px);
 }
 
+
+/* ===== Primary Button ===== */
+
 .btn-primary {
-  background: var(--accent);
+  background-color: var(--accent);
   color: var(--bg-primary);
 }
 
 .btn-primary:hover {
-  background: #d2bfa5;
+  background-color: var(--accent-hover);
+  color: var(--bg-primary);
 }
 
+
+/* ===== Secondary Button ===== */
+
 .btn-secondary {
+  background-color: transparent;
+
   border-color: var(--border);
   color: var(--text-primary);
 }
@@ -144,9 +281,24 @@
   color: var(--accent);
 }
 
-/* ===== Responsive ===== */
+
+/* ===== Accessibility ===== */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* ===== Tablets ===== */
 
 @media (max-width: 768px) {
+
   .header-inner {
     min-height: 72px;
   }
@@ -176,9 +328,18 @@
   .hero h1 {
     letter-spacing: -0.04em;
   }
+
+  .hero-description {
+    line-height: 1.8;
+  }
+
 }
 
+
+/* ===== Mobile ===== */
+
 @media (max-width: 480px) {
+
   .container {
     width: min(100% - 32px, 1200px);
   }
@@ -186,28 +347,64 @@
   .header-inner {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 12px;
+
     padding-block: 16px;
   }
 
   .main-nav {
-    justify-content: center;
     width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .main-nav a {
+    font-size: 12px;
   }
 
   .hero {
     padding-block: 72px 96px;
   }
 
+  .hero-label {
+    margin-bottom: 24px;
+
+    font-size: 10px;
+    letter-spacing: 1.8px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 9vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-description {
+    margin-top: 24px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
   .hero-actions {
     flex-direction: column;
+    align-items: stretch;
+
+    gap: 12px;
+    margin-top: 32px;
   }
 
   .btn {
     width: 100%;
   }
+
 }
 
+
+/* ===== Reduced Motion ===== */
+
 @media (prefers-reduced-motion: reduce) {
+
   html {
     scroll-behavior: auto;
   }
@@ -216,4 +413,9 @@
   .main-nav a {
     transition: none;
   }
+
+  .btn:hover {
+    transform: none;
+  }
+
 }
