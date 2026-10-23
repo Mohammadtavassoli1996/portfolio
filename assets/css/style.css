@@ -1,0 +1,20 @@
+
+/* Mohammad Web Portfolio */
+/* Global styles */
+
+:root {
+  --color-background: #ffffff;
+  --color-text: #181818;
+  --color-accent: #2563eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+}
