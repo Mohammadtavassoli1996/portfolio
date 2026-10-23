@@ -352,6 +352,9 @@ button:focus-visible {
 
     padding-block: 16px;
   }
+   .hero-inner {
+  width: min(100% - 32px, 1200px);
+}
 
   .main-nav {
     width: 100%;
