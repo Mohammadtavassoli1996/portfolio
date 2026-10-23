@@ -861,6 +861,18 @@ button:focus-visible {
   line-height: 1.7;
 }
 
+.contact-arrow {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.contact-btn:hover .contact-arrow {
+  transform: translate(3px, -3px);
+}
+
 
 
 /* ===== Copy Email Button ===== */
@@ -940,6 +952,8 @@ button:focus-visible {
   color: var(--text-secondary);
   font-size: 12px;
 }
+
+
 
 
 
@@ -1350,6 +1364,14 @@ button:focus-visible {
    .footer-nav a,
   .footer-bottom a {
     transition: none;
+  }
+
+   .contact-arrow {
+    transition: none;
+  }
+
+  .contact-btn:hover .contact-arrow {
+    transform: none;
   }
 
 }
